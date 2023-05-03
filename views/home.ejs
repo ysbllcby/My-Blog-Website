@@ -5,8 +5,8 @@
 <p> <%= startingContent %> </p>
 
 <% posts.forEach(function(post){ %>
-    <h2> <%= JSON.stringify(post.title) %> </h2>
-    <p> <%= JSON.stringify(post.content) %> </p>
+    <h2> <%= post.title %> </h2>
+    <p> <%= post.content.substring(1, 100) + "..." %> <a href="/posts/<%= post.title %>">Read more</a> </p>
 <% }) %>
 
 <%- include("partials/footer") %>
