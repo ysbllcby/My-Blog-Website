@@ -4,8 +4,9 @@
 
 <p> <%= startingContent %> </p>
 
-<% for (var i=0; i<posts.length; i++) { %>
-    <p> <%= JSON.stringify(posts[i]) %> </p>
-<% } %>
+<% posts.forEach(function(post){ %>
+    <h2> <%= JSON.stringify(post.title) %> </h2>
+    <p> <%= JSON.stringify(post.content) %> </p>
+<% }) %>
 
 <%- include("partials/footer") %>
